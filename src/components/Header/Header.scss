@@ -1,0 +1,148 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    z-index: 99;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    @include md {
+        padding: 0 40px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include md {
+            height: 80px;
+        }
+    }
+    .left {
+        list-style-type: none;
+        display: none;
+        gap: 25px;
+        @include md {
+            display: flex;
+        }
+        .light{
+            color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        .about-link{
+            color: #212121;
+        }
+        li {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+    .center {
+        font-size: 22px;
+        font-weight: 700;
+        cursor: pointer;
+        @include md {
+            font-size: 34px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include md {
+            gap: 25px;
+        }
+        svg {
+            font-size: 20px;
+            cursor: pointer;
+            @include md {
+                font-size: 24px;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        .login{
+            font-size: 12px;
+        }
+        .cart-icon {
+            position: relative;
+            span {
+                min-width: 20px;
+                text-align: center;
+                background: #8e2de2;
+                padding: 2.5px;
+                position: absolute;
+                top: -5px;
+                right: -12px;
+                font-size: 12px;
+                line-height: 1;
+                border-radius: 10px;
+            }
+            .change{
+                color:white;
+            }
+        }
+        .btn {
+            outline: 0;
+            border: 0;
+            height: 30px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            background: #8e2de2;
+            border-bottom: 3px solid #6516aa;
+            text-transform: uppercase;
+            border-radius: 10%;
+            svg {
+                margin-right: 10px;
+            }
+            @include md{
+                font-size: 16px;
+            }
+        }
+    }
+    &.sticky-header {
+        background-color: #212121;
+        color: white;
+        position: sticky;
+        top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+    &.back-change{
+        background-color: black;
+        color: white;
+    }
+    &.back-orig{
+        background-color: white;
+        color: black;
+    }
+}
+
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
