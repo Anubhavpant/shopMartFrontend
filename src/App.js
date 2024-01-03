@@ -26,7 +26,7 @@ function App() {
             <Route path="/about" element={<About/>} /> 
             <Route path="/category/:id" element={<Category />} />
             <Route path="/success" element={<Success />} />
-            <Route path="?success=false" element={<Failure />} />
+            <Route path="/?success=false" element={<Failure />} />
             <Route path="/product/:id" element={<SingleProduct />} />
           </Routes>
           <Newsletter />
