@@ -52,7 +52,6 @@ const Search = ({ setSearchModal }) => {
                             }}
                         >
                             <div className="image-container">
-                                {console.log(item)}
                                 <img src={item?.attributes?.img?.data?.attributes?.url} alt=""/>
                             </div>
                             <div className="prod-details">
