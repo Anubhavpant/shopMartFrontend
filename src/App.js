@@ -10,7 +10,7 @@ import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
 import About from "./components/About/About";
 import Success from "./components/Success/Success";
-import Failure from "./components/Failure/Failure";
+import Failure from "./components/Success/Success";
 
 
 
@@ -26,7 +26,7 @@ function App() {
             <Route path="/about" element={<About/>} /> 
             <Route path="/category/:id" element={<Category />} />
             <Route path="/success" element={<Success />} />
-            <Route path="?success=false" element={<Failure />} />
+            <Route path="/failure" element={<Failure />} />
             <Route path="/product/:id" element={<SingleProduct />} />
           </Routes>
           <Newsletter />

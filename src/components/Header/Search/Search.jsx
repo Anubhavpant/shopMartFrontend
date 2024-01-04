@@ -52,15 +52,8 @@ const Search = ({ setSearchModal }) => {
                             }}
                         >
                             <div className="image-container">
-                                <img
-                                    src={
-                                        process.env
-                                            .REACT_APP_STRAPI_DEV_APP_KEY +
-                                        item.attributes.image.data[0].attributes
-                                            .url
-                                    }
-                                    alt=""
-                                />
+                                {console.log(item)}
+                                <img src={item?.attributes?.img?.data?.attributes?.url} alt=""/>
                             </div>
                             <div className="prod-details">
                                 <span className="name">
