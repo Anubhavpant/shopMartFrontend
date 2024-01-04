@@ -10,7 +10,7 @@ import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
 import About from "./components/About/About";
 import Success from "./components/Success/Success";
-import Failure from "./components/Success/Success";
+import Failure from "./components/Failure/Failure";
 
 
 
