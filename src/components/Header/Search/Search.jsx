@@ -56,10 +56,10 @@ const Search = ({ setSearchModal }) => {
                             </div>
                             <div className="prod-details">
                                 <span className="name">
-                                    {item.attributes.title}
+                                    {item?.attributes?.title}
                                 </span>
                                 <span className="desc">
-                                    {item.attributes.description}
+                                    {item?.attributes?.description}
                                 </span>
                             </div>
                         </div>
